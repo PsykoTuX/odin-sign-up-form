@@ -18,6 +18,46 @@ a {
     color: inherit;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    margin-right: 4rem;
+
+}
+
+label {
+    font-family: 'Courier New', Courier, monospace;
+    color: #2b333f;
+    font-size: small;
+    font-weight: 550;
+}
+
+input {
+    border: 1px solid #E5E7EB;
+    line-height: 1.5rem;
+    width: 13vw ;
+    border-radius: 5px;
+}
+
+
+input:focus {
+    outline: rgb(31, 101, 194) 1px solid ;
+    box-shadow: 2px 2px 5px rgb(11, 66, 138);
+}
+
+
+.left-panel p {
+ 
+    width: calc(35% - 10vw);
+    position: absolute;
+    bottom: 0 ;
+    text-align: center;
+    color: whitesmoke;
+    opacity: 0.9;
+
+}
+
 .left-panel {
     width: 35%;
     height: 100vh;
@@ -46,16 +86,7 @@ a {
     height: 90% ;
 }
 
-.left-panel p {
- 
-    width: calc(35% - 10vw);
-    position: absolute;
-    bottom: 0 ;
-    text-align: center;
-    color: whitesmoke;
-    opacity: 0.9;
 
-}
 
 .right-panel {
     background-color: rgb(249, 250, 251) ;
@@ -69,9 +100,14 @@ a {
 .form-container {
 
     background-color: white;
-    height: 30%;
+    height: 30vh;
     box-shadow: 1px 1px 10px #bdbdbd;
+    margin: 2rem 0 ;
 
+}
+
+.forms {
+    padding-bottom: 3rem;
 }
 
 .form-container p {
@@ -79,7 +115,11 @@ a {
     font-size: 1.5rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-top: 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+flex-direction: column;
+justify-content: center;
+height: 100%;
 }
 
 
@@ -94,13 +134,13 @@ a {
     font-weight:500;
     margin-right: 4vw;
     font-size: 1.5rem;
-    margin-top: 9vh;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     height: 28vh;
 }
 
 .dummy-text p {
     margin-bottom: 0.5rem;
+    margin-top: 1rem;
 }
 
 .bottom-right-panel {
@@ -109,6 +149,8 @@ flex-direction: column;
 align-items: flex-start;
 justify-content: flex-start;
 margin-top: 2rem;
+height: auto;
+justify-self: center;
 }
 
 .create-button {
@@ -129,40 +171,32 @@ margin-top: 2rem;
     font-weight: bold;
 }
 
-.forms {
-display: flex;
-flex-direction: column;
-justify-content: center;
-height: 80%;
-}
 
 .name, .contact, .password {
     display: flex;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1.5rem;
-    margin-right: 4rem;
-
-}
-
-label {
-    font-family: 'Courier New', Courier, monospace;
-    color: #2b333f;
-    font-size: small;
-    font-weight: 550;
-}
-
-input {
-    border: 1px solid #E5E7EB;
-    line-height: 1.5rem;
-    width: 15rem ;
-    height: 1.8rem;
-
-}
 
 .bottom-right-panel p {
     font-size: 1.2rem;
+}
+
+.valid {
+border-color: green;
+}
+
+.invalid {
+border-color: rgba(179, 11, 11, 0.781);    
+}
+
+.password p {
+    color: rgba(179, 11, 11, 0.781);
+    font-size: 0.8rem;  
+    margin-top: 0.2rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.error {
+    visibility: hidden;
 }
